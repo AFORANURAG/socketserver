@@ -6,10 +6,10 @@ const {Server}=require("socket.io")
 
 
 const server=http.createServer(app)
-app.get("/",(req,res)=>{
-res.send("welcome bro kese ho yar")
+// app.get("/",(req,res)=>{
+// res.send("welcome bro kese ho yar")
 
-})
+// })
 
 
 const io=new Server(server,{
@@ -36,9 +36,10 @@ socket.to(data.room).emit("receive_message",data)
 
 })
 
-app.listen(7000,()=>{
-    console.log("listening on port 8080")
-})
+// app.listen(7000,()=>{
+//     console.log("listening on port 8080")
+// })
+
 server.listen(8000,()=>{
     console.log("Server Running on port 8000")
 })
